@@ -50,7 +50,7 @@ A **Chatbot** is integrated into the platform to assist users with queries regar
 - **AI Tools:** Predictive analytics, machine learning algorithms
 
   
-##Getting Started
+## Getting Started
 To set up and run the project locally:
 1. Clone the repository.
 2. Set up a local server (e.g., XAMPP, WAMP).
