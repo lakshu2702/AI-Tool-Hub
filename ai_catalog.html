@@ -6,183 +6,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Catalog</title>
     <style>
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Adjust for header offset */
-}
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            scroll-padding-top: 80px; /* Adjust for header offset */
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #faf2f2;
-    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
-}
+        body {
+            font-family: Arial, sans-serif; /* Font style for body */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #faf2f2; /* Background color */
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
 
-header {
-    background-color: #fbeded;
-    color: #000000;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
+        header {
+            background-color: #fbeded; /* Header background color */
+            color: #000000; /* Header text color */
+            padding: 20px; /* Padding inside header */
+            display: flex; /* Flexbox for layout */
+            align-items: center; /* Align items vertically centered */
+            justify-content: space-between; /* Space between header items */
+            position: fixed; /* Fixed position at the top */
+            top: 0; /* Align to top */
+            left: 0; /* Align to left */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure header is on top */
+        }
 
-h1 {
-    margin: 0;
-}
+        h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
 
-nav {
-    margin-left: auto;
-}
+        nav {
+            margin-left: auto; /* Push nav to the right */
+        }
 
-#category-list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+        #category-list {
+            display: flex; /* Flexbox for horizontal list */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            list-style: none; /* Remove bullet points */
+        }
 
-#category-list li {
-    margin-right: 20px;
-}
+        #category-list li {
+            margin-right: 20px; /* Space between list items */
+        }
 
-#category-list a {
-    display: block;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #f3f3f3;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        #category-list a {
+            display: block; /* Block display for links */
+            padding: 10px 15px; /* Padding inside links */
+            background-color: #333; /* Background color for links */
+            color: #f3f3f3; /* Text color for links */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth background color transition */
+        }
 
-#category-list a:hover {
-    color: #000;
-    background-color: #f6c5ff;
-}
+        #category-list a:hover {
+            color: #000; /* Text color on hover */
+            background-color: #f6c5ff; /* Background color on hover */
+        }
 
-#content {
-    padding-top: 100px; /* Space for fixed header */
-}
+        #content {
+            padding-top: 100px; /* Space for fixed header */
+        }
 
-#tools {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 1200px;
-}
+        #tools {
+            margin: 20px auto; /* Centered tools section */
+            padding: 20px; /* Padding inside tools section */
+            background-color: #fff; /* Background color for tools */
+            border-radius: 5px; /* Rounded corners */
+            width: 80%; /* Width of tools section */
+            max-width: 1200px; /* Max width for larger screens */
+        }
 
-.tool-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
+        .tool-container {
+            display: flex; /* Flexbox for tool container */
+            flex-wrap: wrap; /* Wrap tools to new lines */
+            justify-content: space-between; /* Space tools evenly */
+            gap: 20px; /* Space between tools */
+        }
 
-.tool-box {
-    display: flex; /* Align items horizontally */
-    align-items: flex-start; /* Align items at the start */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-    flex-basis: 48%; /* Adjust to fit two tools per row */
-    text-align: left; /* Align text to the left */
-    opacity: 0.85;
-    border: 3px solid transparent; /* Default transparent border */
-}
+        .tool-box {
+            display: flex; /* Align items horizontally */
+            align-items: flex-start; /* Align items at the start */
+            padding: 20px; /* Padding inside tool box */
+            border-radius: 10px; /* Rounded corners for tool box */
+            margin: 10px; /* Margin around tool box */
+            flex-basis: 48%; /* Adjust to fit two tools per row */
+            text-align: left; /* Align text to the left */
+            opacity: 0.85; /* Slightly transparent */
+            border: 3px solid transparent; /* Default transparent border */
+        }
 
-.content {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    margin-right: 20px; /* Space between text and image */
-}
+        .content {
+            display: flex; /* Flexbox for content */
+            flex-direction: column; /* Stack content vertically */
+            margin-right: 20px; /* Space between text and image */
+        }
 
-.tool-image {
-    width: 400px; /* Fixed size for the image */
-    height: 250px; /* Maintain aspect ratio */
-}
+        .tool-image {
+            width: 400px; /* Fixed size for the image */
+            height: 250px; /* Maintain aspect ratio */
+        }
 
-h3 {
-    margin-bottom: 10px;
-    color: #000; /* Darkened h3 for visibility */
-}
+        h3 {
+            margin-bottom: 10px; /* Space below h3 */
+            color: #000; /* Darkened h3 for visibility */
+        }
 
-p {
-    color: #000; /* Darkened p text for better readability */
-    margin-bottom: 10px; /* Space between paragraph and list */
-}
+        p {
+            color: #000; /* Darkened p text for better readability */
+            margin-bottom: 10px; /* Space between paragraph and list */
+        }
 
-ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-}
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+        }
 
-/* Glow effect for different tools */
-.tool-box[data-tool="nlp"] {
-    border-image: linear-gradient(45deg, #041dff, #00fffb) 1;
-}
+        /* Glow effect for different tools */
+        .tool-box[data-tool="nlp"] {
+            border-image: linear-gradient(45deg, #041dff, #00fffb) 1; /* Gradient border for NLP */
+        }
 
-.tool-box[data-tool="cv"] {
-    border-image: linear-gradient(45deg, #006a1e, #00ff73) 1;
-}
+        .tool-box[data-tool="cv"] {
+            border-image: linear-gradient(45deg, #006a1e, #00ff73) 1; /* Gradient border for CV */
+        }
 
-.tool-box[data-tool="sr"] {
-    border-image: linear-gradient(45deg, #646464, #c4c4c4) 1;
-}
+        .tool-box[data-tool="sr"] {
+            border-image: linear-gradient(45deg, #646464, #c4c4c4) 1; /* Gradient border for SR */
+        }
 
-.tool-box[data-tool="data-analysis"] {
-    border-image: linear-gradient(45deg, #de07cc, #ff88e5) 1;
-}
+        .tool-box[data-tool="data-analysis"] {
+            border-image: linear-gradient(45deg, #de07cc, #ff88e5) 1; /* Gradient border for Data Analysis */
+        }
 
-.tool-box[data-tool="ml"] {
-    border-image: linear-gradient(45deg, #231e63, #6e7477) 1;
-}
+        .tool-box[data-tool="ml"] {
+            border-image: linear-gradient(45deg, #231e63, #6e7477) 1; /* Gradient border for ML */
+        }
 
-.tool-box[data-tool="copywriting"] {
-    border-image: linear-gradient(45deg, #ffcb6b, #ffe8bd) 1;
-}
+        .tool-box[data-tool="copywriting"] {
+            border-image: linear-gradient(45deg, #ffcb6b, #ffe8bd) 1; /* Gradient border for Copywriting */
+        }
 
-/* Section transition */
-section {
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-    opacity: 0.9; /* Darkened for better contrast */
-    margin-top: 30px;
-    color: #000; /* Darkened text for better visibility */
-}
-
+        /* Section transition */
+        section {
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out; /* Transition effects */
+            opacity: 0.9; /* Slightly transparent for sections */
+            margin-top: 30px; /* Space above sections */
+            color: #000; /* Darkened text for better visibility */
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>AI Catalog</h1>
+        <h1>AI Catalog</h1> <!-- Main title of the page -->
         <nav>
-            <ul id="category-list">
-                <li><a href="#nlp">Natural Language Processing</a></li>
-                <li><a href="#cv">Computer Vision</a></li>
-                <li><a href="#sr">Speech Recognition</a></li>
-                <li><a href="#data-analysis">Data Analysis</a></li>
-                <li><a href="#ml">Machine Learning</a></li>
-                <li><a href="#copywriting">Copywriting</a></li>
+            <ul id="category-list"> <!-- Navigation list for categories -->
+                <li><a href="#nlp">Natural Language Processing</a></li> <!-- Link to NLP section -->
+                <li><a href="#cv">Computer Vision</a></li> <!-- Link to Computer Vision section -->
+                <li><a href="#sr">Speech Recognition</a></li> <!-- Link to Speech Recognition section -->
+                <li><a href="#data-analysis">Data Analysis</a></li> <!-- Link to Data Analysis section -->
+                <li><a href="#ml">Machine Learning</a></li> <!-- Link to Machine Learning section -->
+                <li><a href="#copywriting">Copywriting</a></li> <!-- Link to Copywriting section -->
             </ul>
         </nav>
-    </header>
+    </header>    
 
     <div id="content">
         <section id="tools">
             <div class="tool-container">
+                <!-- Natural Language Processing Section -->
                 <section id="nlp">
                     <div class="tool-box" data-tool="nlp">
                         <div class="content">
                             <h3><a href="nlp.html">Natural Language Processing (NLP)</a></h3>
-                            <p>Natural Language Processing (NLP) is a branch of artificial intelligence that focuses on the interaction between computers and human languages. It involves the development of algorithms and computational models capable of understanding, interpreting, and generating human-like language. NLP enables machines to analyze and derive meaning from vast amounts of natural language data, ranging from written text to spoken words. Applications of NLP span diverse domains, including machine translation, sentiment analysis, chatbots, and text summarization. By leveraging linguistic principles and advanced machine learning techniques, NLP plays a crucial role in enhancing human-computer communication and extracting valuable insights from the ever-expanding pool of linguistic information available on the internet.</p>                            <ul>
+                            <p>Natural Language Processing (NLP) is a branch of artificial intelligence that focuses on the interaction between computers and human languages. It involves the development of algorithms and computational models capable of understanding, interpreting, and generating human-like language. NLP enables machines to analyze and derive meaning from vast amounts of natural language data, ranging from written text to spoken words. Applications of NLP span diverse domains, including machine translation, sentiment analysis, chatbots, and text summarization. By leveraging linguistic principles and advanced machine learning techniques, NLP plays a crucial role in enhancing human-computer communication and extracting valuable insights from the ever-expanding pool of linguistic information available on the internet.</p>
+                            <ul>
                                 <p>Here are few types:</p>
                                 <li>Spacy</li>
                                 <li>NLTK</li>
@@ -194,11 +195,13 @@ section {
                     </div>
                 </section>
     
+                <!-- Computer Vision Section -->
                 <section id="cv">
                     <div class="tool-box" data-tool="cv">
                         <div class="content">
                             <h3><a href="cv.html">Computer Vision</a></h3>
-                            <p>Computer Vision is a field of artificial intelligence that empowers machines with the ability to interpret and understand visual information from the world. It involves the development of algorithms and models that enable computers to analyze and make sense of images or videos. The primary goal of computer vision is to mimic the human visual system, allowing machines to recognize objects, understand scenes, and even extract information from visual data. Applications of computer vision are widespread, ranging from facial recognition and object detection in security systems to medical image analysis and autonomous vehicles. By processing visual inputs, computer vision systems contribute to automation, improved decision-making, and enhanced human-machine interaction in various industries. Advances in deep learning, neural networks, and image processing have significantly propelled the capabilities of computer vision, making it a key technology in the era of artificial intelligence.</p>                            <ul>
+                            <p>Computer Vision is a field of artificial intelligence that empowers machines with the ability to interpret and understand visual information from the world. It involves the development of algorithms and models that enable computers to analyze and make sense of images or videos. The primary goal of computer vision is to mimic the human visual system, allowing machines to recognize objects, understand scenes, and even extract information from visual data. Applications of computer vision are widespread, ranging from facial recognition and object detection in security systems to medical image analysis and autonomous vehicles. By processing visual inputs, computer vision systems contribute to automation, improved decision-making, and enhanced human-machine interaction in various industries. Advances in deep learning, neural networks, and image processing have significantly propelled the capabilities of computer vision, making it a key technology in the era of artificial intelligence.</p>
+                            <ul>
                                 <p>Here are few types:</p>
                                 <li>OpenCV</li>
                                 <li>TensorFlow</li>
@@ -209,11 +212,13 @@ section {
                     </div>
                 </section>
     
+                <!-- Speech Recognition Section -->
                 <section id="sr">
                     <div class="tool-box" data-tool="sr">
                         <div class="content">
                             <h3><a href="sr.html">Speech Recognition</a></h3>
-                            <p>Speech Recognition, also known as Automatic Speech Recognition (ASR), is a technology that converts spoken language into written text. It involves the development of algorithms and models capable of understanding and transcribing spoken words accurately. The primary objective is to enable machines to interpret human speech, facilitating interactions between humans and computers through voice commands, transcription services, and other voice-controlled applications. Speech recognition finds widespread application in various fields, including voice assistants, dictation software, transcription services, and interactive voice response systems. This technology has become an integral part of smart devices, allowing users to control gadgets, compose messages, and perform other tasks using spoken words. Advances in machine learning, neural networks, and natural language processing have significantly improved the accuracy and efficiency of speech recognition systems, making them increasingly prevalent in our daily lives.</p>                            <ul>
+                            <p>Speech Recognition, also known as Automatic Speech Recognition (ASR), is a technology that converts spoken language into written text. It involves the development of algorithms and models capable of understanding and transcribing spoken words accurately. The primary objective is to enable machines to interpret human speech, facilitating interactions between humans and computers through voice commands, transcription services, and other voice-controlled applications. Speech recognition finds widespread application in various fields, including voice assistants, dictation software, transcription services, and interactive voice response systems. This technology has become an integral part of smart devices, allowing users to control gadgets, compose messages, and perform other tasks using spoken words. Advances in machine learning, neural networks, and natural language processing have significantly improved the accuracy and efficiency of speech recognition systems, making them increasingly prevalent in our daily lives.</p>
+                            <ul>
                                 <p>Here are few types:</p>
                                 <li>Pocket Sphinx</li>
                                 <li>Wit AI</li>
@@ -223,11 +228,13 @@ section {
                     </div>
                 </section>
     
+                <!-- Data Analysis Section -->
                 <section id="data-analysis">
                     <div class="tool-box" data-tool="data-analysis">
                         <div class="content">
                             <h3><a href="data-analysis.html">Data Analysis</a></h3>
-                            <p>Data Analysis involves the systematic inspection, cleaning, transformation, and modeling of data to uncover useful information, draw conclusions, and support decision-making processes. It encompasses a variety of techniques and methods aimed at extracting meaningful insights from raw data, enabling organizations to make informed choices and gain a competitive advantage. The process involves identifying patterns, trends, and relationships within datasets, often using statistical and mathematical approaches. Data analysis is crucial across diverse domains, including business, science, finance, healthcare, and more, as it empowers professionals to derive actionable intelligence and improve processes. With the rise of big data and advanced analytics tools, data analysis has evolved, offering more sophisticated and efficient ways to handle large datasets and extract valuable knowledge from them. From descriptive statistics to predictive modeling, data analysis plays a pivotal role in turning data into actionable information for better decision-making.</p>                            <ul>
+                            <p>Data Analysis involves the systematic inspection, cleaning, transformation, and modeling of data to uncover useful information, draw conclusions, and support decision-making processes. It encompasses a variety of techniques and methods aimed at extracting meaningful insights from raw data, enabling organizations to make informed choices and gain a competitive advantage. The process involves identifying patterns, trends, and relationships within datasets, often using statistical and mathematical approaches. Data analysis is crucial across diverse domains, including business, science, finance, healthcare, and more, as it empowers professionals to derive actionable intelligence and improve processes. With the rise of big data and advanced analytics tools, data analysis has evolved, offering more sophisticated and efficient ways to handle large datasets and extract valuable knowledge from them. From descriptive statistics to predictive modeling, data analysis plays a pivotal role in turning data into actionable information for better decision-making.</p>
+                            <ul>
                                 <p>Here are few types:</p>
                                 <li>Pandas</li>
                                 <li>NumPy</li>
@@ -238,13 +245,15 @@ section {
                     </div>
                 </section>
     
+                <!-- Machine Learning Section -->
                 <section id="ml">
                     <div class="tool-box" data-tool="ml">
                         <div class="content">
                             <h3><a href="ml.html">Machine Learning</a></h3>
                             <p>Copywriting AI tools are advanced applications powered by artificial intelligence that assist and enhance the process of content creation. These tools leverage natural language processing (NLP) and machine learning algorithms to generate creative and engaging written content. They can be used for various purposes, including writing marketing copy, product descriptions, blog posts, advertisements, and more. Copywriting AI tools analyze large datasets of diverse writing styles and content to understand language patterns, tone, and structure. They can then generate human-like text by predicting the most contextually appropriate words and phrases. Some popular Copywriting AI tools include OpenAI's GPT-3, Copy.ai, Writesonic, and CopySmith. These tools aim to streamline the copywriting process, providing valuable assistance to writers and marketers in generating impactful and persuasive content.</p>
                             <p>Here are few types:</p>
-                            <li>Scikit learn</li>
+                            <ul>
+                                <li>Scikit learn</li>
                                 <li>PyTorch</li>
                                 <li>Orange</li>
                             </ul>
@@ -253,11 +262,13 @@ section {
                     </div>
                 </section>
     
+                <!-- Copywriting Section -->
                 <section id="copywriting">
                     <div class="tool-box" data-tool="copywriting">
                         <div class="content">
                             <h3><a href="copywriting.html">Copywriting</a></h3>
-                            <p>Copywriting AI tools are advanced applications powered by artificial intelligence that assist and enhance the process of content creation. These tools leverage natural language processing (NLP) and machine learning algorithms to generate creative and engaging written content. They can be used for various purposes, including writing marketing copy, product descriptions, blog posts, advertisements, and more. Copywriting AI tools analyze large datasets of diverse writing styles and content to understand language patterns, tone, and structure. They can then generate human-like text by predicting the most contextually appropriate words and phrases. Some popular Copywriting AI tools include OpenAI's GPT-3, Copy.ai, Writesonic, and CopySmith. These tools aim to streamline the copywriting process, providing valuable assistance to writers and marketers in generating impactful and persuasive content.</p>                            <ul>
+                            <p>Copywriting AI tools are advanced applications powered by artificial intelligence that assist and enhance the process of content creation. These tools leverage natural language processing (NLP) and machine learning algorithms to generate creative and engaging written content. They can be used for various purposes, including writing marketing copy, product descriptions, blog posts, advertisements, and more. Copywriting AI tools analyze large datasets of diverse writing styles and content to understand language patterns, tone, and structure. They can then generate human-like text by predicting the most contextually appropriate words and phrases. Some popular Copywriting AI tools include OpenAI's GPT-3, Copy.ai, Writesonic, and CopySmith. These tools aim to streamline the copywriting process, providing valuable assistance to writers and marketers in generating impactful and persuasive content.</p>
+                            <ul>
                                 <p>Here are few types:</p>
                                 <li>OpenAI's GPT-3</li>
                                 <li>Copy.ai</li>
@@ -270,32 +281,33 @@ section {
                 </section>
             </div>
         </section>
-    </div>
+    </div>    
     
-        <script>
-
-            // Listen for click on all nav links
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault(); // Prevent default jump
-                    const targetSection = document.querySelector(this.getAttribute('href'));
-
-                    // Add a class to the target section for custom animation
-                    targetSection.classList.add('animate-section');
-
-                    // Smooth scroll to the section
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-
-                    // Remove the animation class after animation ends (optional)
-                    setTimeout(() => {
-                        targetSection.classList.remove('animate-section');
-                    }, 1000); // Adjust timeout based on animation duration
+    <script>
+        // Listen for click events on all navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default jump behavior
+    
+                // Get the target section using the href attribute
+                const targetSection = document.querySelector(this.getAttribute('href'));
+    
+                // Add a class to the target section for custom animation
+                targetSection.classList.add('animate-section');
+    
+                // Smooth scroll to the target section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
                 });
+    
+                // Optionally remove the animation class after the animation ends
+                setTimeout(() => {
+                    targetSection.classList.remove('animate-section');
+                }, 1000); // Adjust the timeout based on the animation duration
             });
-        </script>
+        });
+    </script>    
     </div>
 </body>
 
-</html
+</html>

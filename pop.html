@@ -6,32 +6,32 @@
     <title>Video Popup</title>
     <style>
         body {
-            margin: 0;
-            overflow: hidden;
-            background-color: black;
-            transition: opacity 0.5s, background-color 0.5s;
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+            background-color: black; /* Set background color to black */
+            transition: opacity 0.5s, background-color 0.5s; /* Smooth transition for opacity and background color */
         }
 
         video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            object-fit: cover; /* Cover the entire area without distortion */
         }
     </style>
 </head>
 <body>
     <video id="popup-video" autoplay onended="fadeOutAndRedirect()" muted>
-        <source src="popup.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="popup.mp4" type="video/mp4"> <!-- Video source -->
+        Your browser does not support the video tag. <!-- Fallback message for unsupported browsers -->
     </video>
 
     <script>
         function fadeOutAndRedirect() {
-            document.body.style.opacity = 0;
-            document.body.style.backgroundColor = 'black';
+            document.body.style.opacity = 0; /* Fade out the body */
+            document.body.style.backgroundColor = 'black'; /* Ensure background stays black */
             setTimeout(function () {
-                window.location.href = "dashboard.php";
-            }, 500);
+                window.location.href = "dashboard.php"; /* Redirect to the dashboard after fading out */
+            }, 500); // Wait for 500 milliseconds before redirecting
         }
     </script>
 </body>

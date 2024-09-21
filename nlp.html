@@ -2,104 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Language Processing (NLP)</title>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for different screen sizes -->
+    <title>Natural Language Processing (NLP)</title> <!-- Title of the webpage -->
     <style>
-                body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+        body {
+            font-family: 'Arial', sans-serif; /* Font style for the page */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
             background-color: #000; /* Black background */
             color: #fff; /* White text */
         }
 
         header {
-            background-color: #1a1a1a; /* Darker header background */
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+            background-color: #1a1a1a; /* Darker background for header */
+            color: #fff; /* White text for header */
+            padding: 10px; /* Padding around header */
+            text-align: center; /* Center text in header */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect around header */
         }
 
         nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px;
-            margin: 0 10px;
-            font-weight: bold;
+            color: #fff; /* White text for navigation links */
+            text-decoration: none; /* Remove underline from links */
+            padding: 5px; /* Padding around links */
+            margin: 0 10px; /* Margin between links */
+            font-weight: bold; /* Bold text for links */
         }
 
         section {
-            padding: 40px;
-            border-radius: 15px;
-            margin: 20px 50px;
-            text-align: center;
+            padding: 40px; /* Padding around section content */
+            border-radius: 15px; /* Rounded corners for section */
+            margin: 20px 50px; /* Margin around section */
+            text-align: center; /* Center text in section */
         }
 
         #nlp-tool-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* Remove bullet points from list */
+            padding: 0; /* Remove padding from list */
+            margin: 0; /* Remove margin from list */
         }
 
         li {
             background-color: #434343; /* Dark background for list items */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            border: 2px solid #00bfff; /* Border color */
-            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Glow effect */
+            padding: 20px; /* Padding within list items */
+            margin: 20px 0; /* Margin above and below list items */
+            border-radius: 10px; /* Rounded corners for list items */
+            border: 2px solid #00bfff; /* Border color for list items */
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Glow effect around list items */
         }
 
         h1, h2, h3, h4 {
-            color: #fff; /* White text */
+            color: #fff; /* White text for headings */
         }
 
         a {
             color: #1e90ff; /* Bright blue for links */
-            text-decoration: none;
+            text-decoration: none; /* Remove underline from links */
         }
 
         a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline links on hover */
         }
 
         .tool-instructions {
-            text-align: justify;
-            margin-top: 15px;
-            box-shadow: none; /* Remove glow effect */
+            text-align: justify; /* Justify text within instructions */
+            margin-top: 15px; /* Margin above instructions */
+            box-shadow: none; /* Remove glow effect for instructions */
         }
 
         .tool-logo {
-            max-width: 200px;
-            max-height: 200px;
-            margin-bottom: 10px;
+            max-width: 200px; /* Maximum width for tool logos */
+            max-height: 200px; /* Maximum height for tool logos */
+            margin-bottom: 10px; /* Margin below logos */
         }
-
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Tools in Natural Language Processing (NLP)</h1>
+        <h1>Tools in Natural Language Processing (NLP)</h1> <!-- Main header for the page -->
         <nav>
-            <a href="ai_catalog.html">Back to Catalog</a>
+            <a href="ai_catalog.html">Back to Catalog</a> <!-- Navigation link to go back to the catalog -->
         </nav>
     </header>
 
     <section id="nlp-details">
-        <ul id="nlp-tool-list">
+        <ul id="nlp-tool-list"> <!-- Unordered list to display NLP tools -->
         </ul>
     </section>
 
     <script>
+        // Array of NLP tools with their details
         const nlpTools = [
             {
                 name: "Spacy",
                 description: "Spacy is an open-source natural language processing library designed to be fast and efficient. It provides pre-trained models for various languages and tasks such as part-of-speech tagging, named entity recognition, and more.",
-                link: "https://spacy.io/",
-                logo: "catalog/spacy.png",
+                link: "https://spacy.io/", // Link to Spacy's official site
+                logo: "catalog/spacy.png", // Path to Spacy's logo
                 instructions: [
                     "Install Spacy using pip: `pip install spacy`.",
                     "Download a pre-trained model: `python -m spacy download en_core_web_sm`.",
@@ -109,8 +108,8 @@
             {
                 name: "NLTK",
                 description: "Natural Language Toolkit (NLTK) is a powerful library for working with human language data. It includes easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and more.",
-                link: "https://www.nltk.org/",
-                logo: "catalog/nltk.png",
+                link: "https://www.nltk.org/", // Link to NLTK's official site
+                logo: "catalog/nltk.png", // Path to NLTK's logo
                 instructions: [
                     "Install NLTK using pip: `pip install nltk`.",
                     "Import NLTK in your Python script and download necessary resources: `nltk.download('punkt')`.",
@@ -120,8 +119,8 @@
             {
                 name: "TextBlob",
                 description: "TextBlob is a Python library for processing textual data. It provides a simple API for common natural language processing (NLP) tasks, such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.",
-                link: "https://textblob.readthedocs.io/",
-                logo: "catalog/textblob.png",
+                link: "https://textblob.readthedocs.io/", // Link to TextBlob's official site
+                logo: "catalog/textblob.png", // Path to TextBlob's logo
                 instructions: [
                     "Install TextBlob using pip: `pip install textblob`.",
                     "Import TextBlob in your Python script and create a TextBlob object with your text: `blob = TextBlob('Your text here')`.",
@@ -131,8 +130,8 @@
             {
                 name: "Stanford Core NLP",
                 description: "Stanford Core NLP is a suite of natural language processing tools developed by the Stanford NLP Group. It provides tools for various tasks, including part-of-speech tagging, named entity recognition, sentiment analysis, coreference resolution, and more.",
-                link: "https://stanfordnlp.github.io/CoreNLP/",
-                logo: "catalog/stanford_core_nlp.png",
+                link: "https://stanfordnlp.github.io/CoreNLP/", // Link to Stanford Core NLP's official site
+                logo: "catalog/stanford_core_nlp.png", // Path to Stanford Core NLP's logo
                 instructions: [
                     "Download the Stanford Core NLP library from the official website.",
                     "Start the Core NLP server: `java -cp 'stanford-corenlp/*' edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000`.",
@@ -142,23 +141,23 @@
             // Add more NLP tools as needed
         ];
 
-        const nlpToolList = document.getElementById("nlp-tool-list");
+        const nlpToolList = document.getElementById("nlp-tool-list"); // Get the unordered list element by ID
 
         // Populate the NLP tool list
         nlpTools.forEach(tool => {
-            const li = document.createElement("li");
+            const li = document.createElement("li"); // Create a new list item for each tool
             li.innerHTML = `
-                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
-                <p>${tool.description}</p>
-                <a href="${tool.link}" target="_blank">Visit Site</a>
-                <div class="tool-instructions">
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo"> <!-- Tool logo -->
+                <p>${tool.description}</p> <!-- Description of the tool -->
+                <a href="${tool.link}" target="_blank">Visit Site</a> <!-- Link to the tool's site -->
+                <div class="tool-instructions"> <!-- Instructions for using the tool -->
                     <h4>How to Use ${tool.name}:</h4>
                     <ol>
-                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')} <!-- List of instructions -->
                     </ol>
                 </div>
             `;
-            nlpToolList.appendChild(li);
+            nlpToolList.appendChild(li); // Append the new list item to the tool list
         });
     </script>
 </body>

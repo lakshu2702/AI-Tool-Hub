@@ -5,231 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trends and News Blog</title>
     <style>
+        /* General body styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #FFFFFF; /* Light gray background */
-            color: #000000; /* Dark text color for better readability */
+            background: #FFFFFF; /* White background */
+            color: #000000; /* Black text */
         }
     
+        /* Header styling */
         header {
-            background: #F8F8F8; /* No color at the top */
-    color: #5E5E5E; /* Darker text color for contrast */
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #9400D3; /* Neon purple border */
-    border-top: none; /* Remove top border */
-    box-shadow: 0 0 10px #9400D3, 0 0 20px #9400D3; /* Glowing effect */
-    border-radius: 0 0 10px 10px; /* Curved borders at the bottom */
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Roboto:wght@400&display=swap');
-
-h1, h2, h3 {
-    font-family: 'Lora', serif; /* Heading font */
-    color: #3E1A78;
-    margin-bottom: 1px; /* Adjust this value to reduce the gap */
-}
-
-p,ul,li {
-    font-family: 'Roboto', sans-serif; /* Paragraph font */
-    margin-bottom: 1px; /* Adjust this value to reduce the gap */
-
-}
-        header .container {
-            display: flex;
-            justify-content: center;
+            background: #F8F8F8; /* Light gray background */
+            color: #5E5E5E; /* Gray text */
+            padding: 10px 0;
+            position: fixed; /* Fixed at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Top position */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border: 1px solid #9400D3; /* Purple border */
+            border-top: none; /* No top border */
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+            text-align:center;
         }
-    
-        header h1 {
-            margin: 0;
+
+        /* Importing custom fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Roboto:wght@400&display=swap');
+
+        /* Heading styles */
+        h1, h2, h3 {
+            font-family: 'Lora', serif; /* Serif font for headings */
+            color: #3E1A78; /* Dark purple color */
+            margin-bottom: 1px; /* Reduced bottom margin */
         }
-    
+
+        /* Paragraph and list styles */
+        p, ul, li {
+            font-family: 'Roboto', sans-serif; /* Sans-serif font for body text */
+            margin-bottom: 1px; /* Reduced bottom margin */
+        }
+
+        /* Navigation menu styling */
         nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 165px;
-    height: 100%;
-    background: #FFFFF0; /* Deep purple */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    border: 2px solid transparent; /* Set all borders to transparent */
-    border-right: 2px solid 4B0082; /* Neon purple border on the right */
-    border-bottom: 2px solid #4B0082; /* Neon purple border on the bottom */
-    box-shadow: 0 0 10px #4B0082, 0 0 20px #4B0082; /* Glowing effect */
-}
+            position: fixed; /* Fixed on the left */
+            top: 0; /* Top position */
+            left: 0; /* Left position */
+            width: 165px; /* Width of the navigation */
+            height: 100%; /* Full height */
+            background: #FFFFF0; /* Light background */
+            padding: 20px; /* Padding inside navigation */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            border: 2px solid transparent; /* Transparent borders */
+            border-right: 2px solid #4B0082; /* Right border color */
+            border-bottom: 2px solid #4B0082; /* Bottom border color */
+        }
 
-    
+        /* Navigation list styles */
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* No bullet points */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
         }
-    
+
+        /* Navigation item styles */
         nav ul li {
-            margin: 20px 0;
+            margin: 20px 0; /* Margin between items */
         }
-    
+
+        /* Navigation link styles */
         nav ul li a {
-            color: #0f0120; /* Light lavender text */
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
+            color: #0f0120; /* Text color */
+            text-decoration: none; /* No underline */
+            font-weight: bold; /* Bold text */
+            display: block; /* Block display */
+            padding: 10px; /* Padding for links */
+            border-radius: 5px; /* Rounded corners */
         }
-    
+
+        /* Link hover effect */
         nav ul li a:hover {
-            background: #9932CC; /* Medium purple background on hover */
+            background: #9932CC; /* Background on hover */
             color: #FFFFFF; /* White text on hover */
         }
-    
-        main {
-            margin-left: 220px;
-            margin-top: 25px;
-            margin-bottom: 30px;
-            padding: 80px 20px 20px;
-            display: block;
-            max-width: calc(100% - 240px);
-        }
-    
-        section {
-            background: #F8F8FF; /* White background */
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            margin-bottom: 5px;
-            border: 2px solid #663399; /* Neon purple border */
-            box-shadow: 0 0 10px #663399, 0 0 20px #663399; /* Glowing effect */
-        }
-    
-        section h2 {
-            margin-top: 0;
-            color: #3E1A78; /* Medium light purple text */
-        }
-    
-        section h3 {
-            margin-top: 0;
-        }
-    
-        section h3 a {
-            color: #3E1A78; /* Medium purple text */
-            text-decoration: none;
-        }
-    
-        section h3 a:hover {
-            text-decoration: underline;
-            color: #3E1A78; /* Neon purple on hover */
-        }
-    
-        /* Specific styles for the home section */
-        #home {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            border: 2px solid #644592; /* Neon cyan border */
-            box-shadow: 0 0 10px #644592, 0 0 20px #644592, 0 0 30px #644592; /* Glowing effect */
-        }
-        #trends {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            border: 2px solid #644592; /* Neon cyan border */
-            box-shadow: 0 0 10px #644592, 0 0 20px #644592, 0 0 30px #644592; /* Glowing effect */
-        }
-        #about{
-            margin-top: 20px;
-            margin-bottom: 5px;
-            border: 2px solid #644592; /* Neon cyan border */
-            box-shadow: 0 0 10px #644592, 0 0 20px #644592, 0 0 30px #644592; /* Glowing effect */
-        }
-        #news {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            border: 2px solid #644592; /* Neon cyan border */
-            box-shadow: 0 0 10px #644592, 0 0 20px #644592, 0 0 30px #644592; /* Glowing effect */
-        }
-        article {
-            margin-bottom: 15px;
-            display: flex; /* Flexbox for image and text alignment */
-            align-items: flex-start;
-            gap: 20px;
-        }
-    
-        article img {
-            width: 150px;
-            height: auto;
-            flex-shrink: 0; /* Prevent image from shrinking */
-        }
-    
-        footer {
-    background: #F5F5F5; /* White background */
-    color: #4d4d4d; /* Darker text color */
-    position: fixed;
-    font-size: 10px;
-    bottom: 0;
-    width: 100%;
-    height: 20px;
-    z-index: 1000;
-    border: 5px solid transparent; /* Set all borders to transparent */
-    border-top: 1px solid #8D1AFF; /* Neon purple border only at the top */
-    box-shadow: 0 0 10px #8D1AFF, 0 0 20px #8D1AFF; /* Glowing effect */
-}
 
-    
+        /* Main content area styling */
+        main {
+            margin-left: 220px; /* Space for the navigation */
+            margin-top: 25px; /* Space below header */
+            padding: 80px 20px 20px; /* Padding around content */
+            max-width: calc(100% - 240px); /* Responsive width */
+        }
+
+        /* Section styling */
+        section {
+            background: #F8F8FF; /* Slightly off-white background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            padding: 20px; /* Padding inside sections */
+            margin-bottom: 15px; /* Margin between sections */
+            border: 2px solid #663399; /* Purple border */
+        }
+
+        /* Section heading styles */
+        section h2 {
+            margin-top: 0; /* No top margin */
+            color: #3E1A78; /* Dark purple color */
+        }
+
+        section h3 {
+            margin-top: 0; /* No top margin */
+        }
+
+        /* Link styling in section headings */
+        section h3 a {
+            color: #3E1A78; /* Link color */
+            text-decoration: none; /* No underline */
+        }
+
+        /* Link hover effect in section headings */
+        section h3 a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #3E1A78; /* Same color on hover */
+        }
+
+        /* Specific styles for various sections */
+        #home, #trends, #about, #news {
+            margin-top: 20px; /* Margin above */
+            margin-bottom: 5px; /* Margin below */
+            border: 2px solid #644592; /* Border color */
+            box-shadow: 0 0 10px #644592, 0 0 20px #644592, 0 0 30px #644592; /* Glowing effect */
+        }
+
+        /* Article styling */
+        article {
+            margin-bottom: 15px; /* Margin below articles */
+            display: flex; /* Flexbox for layout */
+            align-items: flex-start; /* Align items at the top */
+            gap: 20px; /* Space between items */
+        }
+
+        article img {
+            width: 150px; /* Fixed width for images */
+            height: auto; /* Auto height to maintain aspect ratio */
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+
+        /* Footer styling */
+        footer {
+            background: #F5F5F5; /* Light background */
+            color: #4d4d4d; /* Darker text */
+            position: fixed; /* Fixed at the bottom */
+            font-size: 10px; /* Small text size */
+            bottom: 0; /* Bottom position */
+            width: 100%; /* Full width */
+            height: 20px; /* Fixed height */
+            z-index: 1000; /* On top of other elements */
+            border: 5px solid transparent; /* Transparent borders */
+            border-top: 1px solid #8D1AFF; /* Top border color */
+        }
+
+        /* Footer container styling */
         footer .container {
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 90%;
+            margin: 0 auto; /* Center container */
+            padding: 0 20px; /* Padding inside */
+            width: 90%; /* Width of footer content */
         }
-    
+
+        /* General container for layout */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+            max-width: 1200px; /* Maximum width */
+            margin: 0 auto; /* Center container */
+            padding: 20px; /* Padding inside */
+            display: flex; /* Flexbox for layout */
+            flex-wrap: wrap; /* Wrap items if needed */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between items */
+            gap: 20px; /* Space between items */
         }
-    
+
+        /* Text content area */
         .text-content {
-            flex: 1 1 60%;
+            flex: 1 1 60%; /* Takes up 60% width */
         }
-    
+
+        /* Image content area */
         .image-content {
-            flex: 1 1 35%;
+            flex: 1 1 35%; /* Takes up 35% width */
         }
-    
+
         .image-content img {
-            width: 100%;
-            height: auto;
+            width: 100%; /* Full width */
+            height: auto; /* Auto height to maintain aspect ratio */
         }
     </style>
-    
-    
 </head>
+
 <body>
+    <!-- Header section with the title of the blog -->
     <header>
-        <div class="container">
-            <h1>AI Trends and News</h1>
-        </div>
+            <h1>AI Trends and News</h1> <!-- Main heading -->
     </header>
     
+    <!-- Navigation menu for easy access to different sections -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#trends">Trends</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li> <!-- Link to Home section -->
+            <li><a href="#trends">Trends</a></li> <!-- Link to Trends section -->
+            <li><a href="#news">News</a></li> <!-- Link to News section -->
+            <li><a href="#about">About</a></li> <!-- Link to About section -->
         </ul>
     </nav>
     
     <main>
+        <!-- Home section welcoming readers to the AI Blog -->
         <section id="home">
             <div class="container">
                 <h2>Welcome to the AI Blog</h2>
@@ -248,12 +236,13 @@ p,ul,li {
                 <p>Whether you’re looking to deepen your understanding of AI, explore new applications, or stay informed on the latest trends, our blog is designed for readers of all levels. We aim to create a community of learners and innovators, fostering discussions that encourage exploration and understanding of this groundbreaking technology. Each post invites you to engage, comment, and share your thoughts, helping us build a vibrant community of AI enthusiasts.</p>
             </div>
         </section>
-
+    
+        <!-- Trends section highlighting recent AI developments -->
         <section id="trends">
             <div class="container">
                 <h2>Recent Trends in AI (Click on the articles to find the recent trends)</h2>
                 
-                <!-- AI and Healthcare -->
+                <!-- Article on AI and Healthcare -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/ai_health_care.png" alt="AI in Healthcare" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -262,7 +251,7 @@ p,ul,li {
                     </div>
                 </article>
                 
-                <!-- AI in Autonomous Vehicles -->
+                <!-- Article on AI in Autonomous Vehicles -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/vehi.png" alt="AI in Autonomous Vehicles" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -271,7 +260,7 @@ p,ul,li {
                     </div>
                 </article>
         
-                <!-- AI in Education -->
+                <!-- Article on AI in Education -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/edu.jpg" alt="AI in Education" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -280,7 +269,7 @@ p,ul,li {
                     </div>
                 </article>
         
-                <!-- AI and Cybersecurity -->
+                <!-- Article on AI and Cybersecurity -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/cyb.jpeg" alt="AI in Cybersecurity" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -289,7 +278,7 @@ p,ul,li {
                     </div>
                 </article>
         
-                <!-- Ethical Implications of AI -->
+                <!-- Article on Ethical Implications of AI -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/eth.jpeg" alt="Ethics of AI" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -298,7 +287,7 @@ p,ul,li {
                     </div>
                 </article>
         
-                <!-- AI in Art and Creativity -->
+                <!-- Article on AI in Art and Creativity -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/art.jpeg" alt="AI in Art and Creativity" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -306,14 +295,14 @@ p,ul,li {
                         <p>AI is not just revolutionizing technical fields; it's also making waves in the creative arts. From generating intricate paintings to composing music, AI tools are aiding artists in exploring new creative avenues. This fusion of technology and creativity raises fascinating questions about authorship and inspiration. As AI-generated art becomes more prevalent, it challenges traditional notions of creativity and opens up exciting possibilities for artistic expression.</p>
                     </div>
                 </article>
-                
             </div>
         </section>
-
+    
+        <!-- News section featuring the latest AI news -->
         <section id="news">
             <div class="container">
                 <h2>Latest News (Click on the topics to access the latest news articles)</h2>                
-                <!-- AI Breakthrough in Natural Language Processing -->
+                <!-- Article on AI Breakthrough in Natural Language Processing -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/nlp.jpeg" alt="AI in Natural Language Processing" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -322,7 +311,7 @@ p,ul,li {
                     </div>
                 </article>
                 
-                <!-- Generative AI Models Making Waves -->
+                <!-- Article on Generative AI Models Making Waves -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/gen.webp" alt="Generative AI Models" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -331,7 +320,7 @@ p,ul,li {
                     </div>
                 </article>
                 
-                <!-- AI and Supercomputing Power -->
+                <!-- Article on AI and Supercomputing Power -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/sup.avif" alt="AI and Supercomputing Power" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -340,7 +329,7 @@ p,ul,li {
                     </div>
                 </article>
                 
-                <!-- New AI Regulations Announced -->
+                <!-- Article on New AI Regulations Announced -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/rev.jpg" alt="New AI Regulations" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -349,7 +338,7 @@ p,ul,li {
                     </div>
                 </article>
                 
-                <!-- Emerging AI Startups to Watch -->
+                <!-- Article on Emerging AI Startups to Watch -->
                 <article style="display: flex; align-items: flex-start; gap: 20px;">
                     <img src="blog/st.webp" alt="Emerging AI Startups" style="width: 150px; height: auto; flex-shrink: 0;">
                     <div>
@@ -357,10 +346,10 @@ p,ul,li {
                         <p>Discover new and innovative AI startups that are poised to make a significant impact in the tech world. These startups are leveraging cutting-edge technologies to tackle diverse challenges, from improving healthcare outcomes to enhancing customer engagement. Keeping an eye on these emerging players can provide insights into the future of AI and the transformative solutions they bring to market.</p>
                     </div>
                 </article>
-                
             </div>
         </section>
         
+        <!-- About section providing background on the blog -->
         <section id="about">
             <div class="container">
                 <h2>About Us</h2>
@@ -381,31 +370,37 @@ p,ul,li {
                 <p>Thank you for joining us on this exciting journey into the world of AI. We hope you find our content both informative and inspiring as we continue to explore the endless possibilities that Artificial Intelligence has to offer. Together, let’s uncover the transformative power of AI and its potential to drive positive change across the globe.</p>
             </div>
         </section>
-        
-    </main>        
+    </main>
     
     <footer>
         <div class="container">
+            <!-- Footer copyright notice -->
             <p>&copy; 2024 AI Trends and News Blog.</p>
         </div>
     </footer>
     
-    <script>document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('nav a');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
+    <script>
+        // Wait for the DOM to be fully loaded before executing the script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Add click event listener to each link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+                    const targetElement = document.getElementById(targetId); // Find the target section
+                    
+                    // Scroll to the target section smoothly
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for any fixed header
+                        behavior: 'smooth' // Smooth scroll behavior
+                    });
                 });
             });
         });
-    });
     </script>
+    
 </body>
 </html>

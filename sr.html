@@ -2,123 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speech Recognition</title>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Speech Recognition</title> <!-- Page title -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif; /* Font style */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
             background-color: #000; /* Black background */
             color: #fff; /* White text */
         }
 
         header {
-            background-color: #444; /* Darker header */
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+            background-color: #444; /* Darker header background */
+            color: #fff; /* White text color */
+            padding: 10px; /* Padding around header */
+            text-align: center; /* Centered text */
         }
 
         nav a {
             color: #0000ff; /* Blue links */
-            text-decoration: none;
-            padding: 5px;
-            margin: 0 10px;
-            font-weight: bold;
+            text-decoration: none; /* No underline */
+            padding: 5px; /* Padding for links */
+            margin: 0 10px; /* Margin between links */
+            font-weight: bold; /* Bold text */
         }
 
         section {
-            padding: 40px;
-            border-radius: 15px;
-            margin: 20px 50px;
-            text-align: center;
+            padding: 40px; /* Padding inside section */
+            border-radius: 15px; /* Rounded corners */
+            margin: 20px 50px; /* Margin around section */
+            text-align: center; /* Centered text */
         }
 
         #sr-tool-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* No bullets for list */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
         }
 
         li {
-            background-color: #444; /* Darker background for tools */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            background-color: #444; /* Darker background for list items */
+            padding: 20px; /* Padding inside list items */
+            margin: 20px 0; /* Margin between items */
+            border-radius: 10px; /* Rounded corners */
             border: 2px solid #0000ff; /* Blue border */
-            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glow */
-            display: flex; /* Flexbox for layout */
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glow effect */
+            display: flex; /* Flexbox layout */
             align-items: center; /* Center items vertically */
         }
 
         h1, h2, h3 {
-            color: #bebebe; /* Blue for headers */
+            color: #bebebe; /* Light gray color for headers */
         }
 
         a {
-            color: #ffcc00; /* Gold for links */
-            text-decoration: none;
+            color: #ffcc00; /* Gold color for links */
+            text-decoration: none; /* No underline */
         }
 
         a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline on hover */
         }
 
         .tool-instructions {
-            text-align: justify;
-            margin-top: 10px;
-            flex: 1; /* Allow instructions to take available space */
+            text-align: justify; /* Justified text */
+            margin-top: 10px; /* Top margin */
+            flex: 1; /* Allow instructions to take available space in flex container */
         }
 
         .tool-logo {
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 150px; /* Max width for tool logos */
+            max-height: 150px; /* Max height for tool logos */
             margin-right: 20px; /* Space between image and text */
         }
 
         .tool-instructions ol {
-            padding-left: 20px;
+            padding-left: 20px; /* Indentation for ordered list */
         }
 
         .tool-instructions ol li {
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Space between list items */
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Tools in Speech Recognition</h1>
+        <h1>Tools in Speech Recognition</h1> <!-- Main heading -->
         <nav>
-            <a href="ai_catalog.html">Back to Catalog</a>
+            <a href="ai_catalog.html">Back to Catalog</a> <!-- Navigation link to the catalog -->
         </nav>
     </header>
 
-    <section id="sr-details">
-        <ul id="sr-tool-list">
+    <section id="sr-details"> <!-- Section for speech recognition tools -->
+        <ul id="sr-tool-list"> <!-- Unordered list to hold the tools -->
         </ul>
     </section>
 
     <script>
+        // Array of speech recognition tools with details
         const srTools = [
             {
-                name: "Pocket Sphinx",
-                description: "Pocket Sphinx is a lightweight speech recognition engine that is part of the CMU Sphinx project. It is designed for embedded systems and mobile applications, providing offline speech recognition capabilities.",
-                link: "https://cmusphinx.github.io/",
-                logo: "catalog/Pocket-Sphinx.png",
-                instructions: [
+                name: "Pocket Sphinx", // Tool name
+                description: "Pocket Sphinx is a lightweight speech recognition engine that is part of the CMU Sphinx project. It is designed for embedded systems and mobile applications, providing offline speech recognition capabilities.", // Tool description
+                link: "https://cmusphinx.github.io/", // Link to the tool's website
+                logo: "catalog/Pocket-Sphinx.png", // Path to the tool's logo
+                instructions: [ // Instructions on how to use the tool
                     "Download and install Pocket Sphinx from the official website.",
                     "Integrate Pocket Sphinx into your application for offline speech recognition."
                 ]
             },
             {
-                name: "Wit AI",
-                description: "Wit AI is a natural language processing interface that enables developers to incorporate speech recognition and intent understanding into their applications. It allows for building applications with voice-based user interfaces.",
-                link: "https://wit.ai/",
-                logo: "catalog/wit-ai.png",
-                instructions: [
+                name: "Wit AI", // Tool name
+                description: "Wit AI is a natural language processing interface that enables developers to incorporate speech recognition and intent understanding into their applications. It allows for building applications with voice-based user interfaces.", // Tool description
+                link: "https://wit.ai/", // Link to the tool's website
+                logo: "catalog/wit-ai.png", // Path to the tool's logo
+                instructions: [ // Instructions on how to use the tool
                     "Sign up for a Wit AI account and create a new application.",
                     "Train your application to recognize specific intents and entities for speech recognition.",
                     "Integrate Wit AI into your application using the provided API."
@@ -126,27 +127,27 @@
             }
         ];
 
-        const srToolList = document.getElementById("sr-tool-list");
+        const srToolList = document.getElementById("sr-tool-list"); // Get the unordered list element
 
+        // Iterate through each tool and create list items
         srTools.forEach(tool => {
-            const li = document.createElement("li");
-            li.innerHTML = `
-                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+            const li = document.createElement("li"); // Create a new list item
+            li.innerHTML = ` <!-- Set inner HTML for the list item -->
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo"> <!-- Tool logo -->
                 <div>
-                    <h3>${tool.name}</h3>
-                    <p>${tool.description}</p>
-                    <a href="${tool.link}" target="_blank">Visit Site</a>
+                    <h3>${tool.name}</h3> <!-- Tool name -->
+                    <p>${tool.description}</p> <!-- Tool description -->
+                    <a href="${tool.link}" target="_blank">Visit Site</a> <!-- Link to the tool's website -->
                     <div class="tool-instructions">
-                        <h4>How to Use:</h4>
-                        <ol>
-                            ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        <h4>How to Use:</h4> <!-- Heading for instructions -->
+                        <ol> <!-- Ordered list for instructions -->
+                            ${tool.instructions.map(step => `<li>${step}</li>`).join('')} <!-- Map through instructions to create list items -->
                         </ol>
                     </div>
                 </div>
             `;
-            srToolList.appendChild(li);
+            srToolList.appendChild(li); // Append the list item to the unordered list
         });
     </script>
 </body>
-
 </html>

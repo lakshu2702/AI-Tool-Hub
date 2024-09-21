@@ -2,102 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning</title>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Machine Learning</title> <!-- Title of the page -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1e1e2f; /* Dark background */
-            color: #ffffff; /* White text */
+            font-family: 'Arial', sans-serif; /* Sets the font for the body */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            background-color: #1e1e2f; /* Dark background color */
+            color: #ffffff; /* White text color */
         }
 
         header {
-            background-color: #4b0082; /* Dark purple header */
-            color: #ffffff;
-            padding: 10px;
-            text-align: center;
+            background-color: #4b0082; /* Dark purple background for the header */
+            color: #ffffff; /* White text color */
+            padding: 10px; /* Padding around the header content */
+            text-align: center; /* Centers the header text */
         }
 
         nav a {
-            color: #ff00ff; /* Bright magenta links */
-            text-decoration: none;
-            padding: 5px;
-            margin: 0 10px;
-            font-weight: bold;
+            color: #ff00ff; /* Bright magenta color for navigation links */
+            text-decoration: none; /* Removes underline from links */
+            padding: 5px; /* Padding around the link */
+            margin: 0 10px; /* Horizontal margin between links */
+            font-weight: bold; /* Makes the link text bold */
         }
 
         section {
-            padding: 40px;
-            border-radius: 15px;
-            margin: 20px 50px;
-            text-align: center;
+            padding: 40px; /* Padding inside section elements */
+            border-radius: 15px; /* Rounded corners for section */
+            margin: 20px 50px; /* Margin around the section */
+            text-align: center; /* Centers text within the section */
         }
 
         #ml-tool-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* Removes bullet points from the list */
+            padding: 0; /* Removes default padding */
+            margin: 0; /* Removes default margin */
         }
 
         li {
-            background-color: #42424c; /* Darker purple background for tools */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            border: 2px solid #ff00ff; /* Bright magenta border */
-            box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Magenta glow */
+            background-color: #42424c; /* Darker purple background for list items */
+            padding: 20px; /* Padding inside list items */
+            margin: 20px 0; /* Vertical margin between items */
+            border-radius: 10px; /* Rounded corners for list items */
+            border: 2px solid #ff00ff; /* Bright magenta border around items */
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Magenta glow effect */
         }
 
         h1, h2, h3 {
-            color: #ff00ff; /* Bright magenta for headers */
+            color: #ff00ff; /* Bright magenta color for header texts */
         }
 
         a {
-            color: #ffd700; /* Gold for links */
-            text-decoration: none;
+            color: #ffd700; /* Gold color for regular links */
+            text-decoration: none; /* Removes underline from links */
         }
 
         a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline links on hover */
         }
 
         .tool-instructions {
-            text-align: justify;
-            margin-top: 10px;
+            text-align: justify; /* Justifies text within the instructions */
+            margin-top: 10px; /* Margin above the instructions */
         }
 
         .tool-logo {
-            max-width: 150px;
-            max-height: 150px;
-            margin-bottom: 10px;
+            max-width: 150px; /* Maximum width for tool logos */
+            max-height: 150px; /* Maximum height for tool logos */
+            margin-bottom: 10px; /* Margin below the logos */
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Machine Learning Tools</h1>
+        <h1>Machine Learning Tools</h1> <!-- Main heading for the page -->
         <nav>
-            <a href="ai_catalog.html">Back to Catalog</a>
+            <a href="ai_catalog.html">Back to Catalog</a> <!-- Navigation link to return to the catalog -->
         </nav>
     </header>
 
     <section id="ml-details">
-        <ul id="ml-tool-list">
+        <ul id="ml-tool-list"> <!-- Unordered list to display machine learning tools -->
         </ul>
     </section>
 
     <script>
+        // Array containing information about various machine learning tools
         const mlTools = [
             {
-                name: "Scikit-learn",
+                name: "Scikit-learn", // Name of the tool
                 description: "Scikit-learn is an open-source machine learning library for Python. It provides simple and efficient tools for data analysis and modeling, including classification, regression, clustering, and more.",
-                link: "https://scikit-learn.org/",
-                logo: "catalog/Scikit-learn.png",
-                instructions: [
+                link: "https://scikit-learn.org/", // Official website link
+                logo: "catalog/Scikit-learn.png", // Path to the logo image
+                instructions: [ // Array of instructions for using the tool
                     "Install Scikit-learn using pip: `pip install scikit-learn`.",
                     "Import Scikit-learn in your Python script.",
                     "Use Scikit-learn for various machine learning tasks."
@@ -126,24 +127,25 @@
             }
         ];
 
-        const mlToolList = document.getElementById("ml-tool-list");
+        const mlToolList = document.getElementById("ml-tool-list"); // Get the unordered list element
 
+        // Loop through each tool in the mlTools array
         mlTools.forEach(tool => {
-            const li = document.createElement("li");
-            li.innerHTML = `
+            const li = document.createElement("li"); // Create a new list item for each tool
+            li.innerHTML = ` <!-- Set inner HTML for the list item -->
                 <h3>
-                    <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                    <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo"> <!-- Tool logo -->
                 </h3>
-                <p>${tool.description}</p>
-                <a href="${tool.link}" target="_blank">Visit Site</a>
-                <div class="tool-instructions">
-                    <h4>How to Use:</h4>
+                <p>${tool.description}</p> <!-- Tool description -->
+                <a href="${tool.link}" target="_blank">Visit Site</a> <!-- Link to the tool's website -->
+                <div class="tool-instructions"> <!-- Instructions section -->
+                    <h4>How to Use:</h4> <!-- Heading for instructions -->
                     <ol>
-                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')} <!-- List of instructions -->
                     </ol>
                 </div>
             `;
-            mlToolList.appendChild(li);
+            mlToolList.appendChild(li); // Append the list item to the unordered list
         });
     </script>    
 </body>
