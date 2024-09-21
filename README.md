@@ -49,6 +49,37 @@ A **Chatbot** is integrated into the platform to assist users with queries regar
 - **Database:** Database Management System (DBMS)
 - **AI Tools:** Predictive analytics, machine learning algorithms
 
+To set up the backend database, you can use the following SQL scripts to create the necessary tables for user management, tools, blog posts, and chatbot interactions:
+
+```sql
+-- Table for storing user information
+CREATE DATABASE IF NOT EXISTS ai_tools;
+
+USE ai_tools;
+
+-- Table for storing user information
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+USE ai_tools;
+
+-- Table for storing user feedback
+CREATE TABLE feedback (
+    feedback_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 ## Getting Started
 To set up and run the project locally:
 1. Clone the repository.
