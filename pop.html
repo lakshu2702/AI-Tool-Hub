@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Popup</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            transition: opacity 0.5s, background-color 0.5s;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="popup-video" autoplay onended="fadeOutAndRedirect()" muted>
+        <source src="popup.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        function fadeOutAndRedirect() {
+            document.body.style.opacity = 0;
+            document.body.style.backgroundColor = 'black';
+            setTimeout(function () {
+                window.location.href = "dashboard.php";
+            }, 500);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriting</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #f5f5dc; /* Cream text */
+        }
+
+        header {
+            background-color: #222222; /* Dark gray header */
+            color: #f5f5dc; /* Cream text */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #f5f5dc; /* Cream links */
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #copywriting-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #444444; /* Darker background for tools */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #f5f5dc; /* Cream border */
+            box-shadow: 0 0 15px #f5f5dc; /* Glowing effect */
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center; /* Center text in list item */
+        }
+
+        li:hover {
+            box-shadow: 0 0 30px #f5f5dc; /* Enhanced glow on hover */
+        }
+
+        h1, h2 {
+            color: #f5f5dc; /* Cream for headers */
+        }
+
+        h3 {
+            color: #ffd700; /* Gold color for tool names */
+            margin: 10px 0; /* Margin around tool name */
+        }
+
+        a {
+            color: #dcdcdc; /* Light gray for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: left; /* Left-align instructions */
+            margin-top: 10px;
+        }
+
+        .tool-logo {
+            max-width: 150px;
+            max-height: 150px;
+            margin-bottom: 10px; /* Space below the logo */
+        }
+
+        .tool-header {
+            display: flex;
+            flex-direction: column; /* Stack logo and heading */
+            align-items: center; /* Center items */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Copywriting AI Tools</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="copywriting-details">
+        <ul id="copywriting-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const copywritingTools = [
+            {
+                name: "OpenAI's GPT-3",
+                description: "OpenAI's GPT-3 (Generative Pre-trained Transformer 3) is a powerful language processing AI model. It can generate human-like text and is often used for various natural language processing tasks, including copywriting.",
+                link: "https://www.openai.com/",
+                logo: "catalog/gpt-3-logo.png",
+                instructions: [
+                    "Sign up for an account on the OpenAI platform.",
+                    "Access the GPT-3 API and obtain your API key.",
+                    "Use the API key to make requests to the GPT-3 endpoint.",
+                    "Customize prompt and parameters for desired output.",
+                    "Receive and utilize the generated copy for your needs."
+                ]
+            },
+            {
+                name: "Copy.ai",
+                description: "Copy.ai is an AI-powered copywriting tool that helps users generate creative and engaging content. It uses natural language processing algorithms to understand user inputs and provide relevant and coherent text.",
+                link: "https://www.copy.ai/",
+                logo: "catalog/copyai-logo.png",
+                instructions: [
+                    "Create an account on the Copy.ai platform.",
+                    "Choose the type of content you want to generate (e.g., blog post, social media copy).",
+                    "Input relevant details and preferences for the content.",
+                    "Use the generated copy provided by Copy.ai.",
+                    "Edit and refine the content as needed for your specific requirements."
+                ]
+            },
+            {
+                name: "Writesonic",
+                description: "Writesonic is an AI writing assistant that uses machine learning to generate high-quality content. It is designed for marketers, bloggers, and other content creators to streamline the copywriting process.",
+                link: "https://writesonic.com/",
+                logo: "catalog/writesonic-logo.png",
+                instructions: [
+                    "Sign up on the Writesonic platform.",
+                    "Select the type of content you want to create (e.g., ad copy, product descriptions).",
+                    "Input relevant information and prompts for the AI.",
+                    "Review and customize the generated content.",
+                    "Download or copy the AI-generated text for use in your projects."
+                ]
+            },
+            {
+                name: "CopySmith",
+                description: "CopySmith is an AI copywriting tool that leverages natural language processing to create persuasive and effective content. It assists users in crafting engaging copy for various purposes, from marketing to creative writing.",
+                link: "https://copysmith.ai/",
+                logo: "catalog/copysmith-logo.png",
+                instructions: [
+                    "Register for a CopySmith account.",
+                    "Choose the type of content you want to generate (e.g., advertising, email copy).",
+                    "Input specific details and requirements for the copy.",
+                    "Review and edit the AI-generated copy as needed.",
+                    "Download or integrate the content into your marketing or writing projects."
+                ]
+            }
+        ];
+
+        const copywritingToolList = document.getElementById("copywriting-tool-list");
+
+        copywritingTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div class="tool-header">
+                    <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                    <h3>${tool.name}</h3>
+                </div>
+                <p>${tool.description}</p>
+                <a href="${tool.link}" target="_blank">Visit Site</a>
+                <div class="tool-instructions">
+                    <h4>How to Use:</h4>
+                    <ol>
+                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+            `;
+            copywritingToolList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+
+        header {
+            background-color: #1a1a1a; /* Dark header */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #00ff00; /* Neon green links */
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #cv-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #000; /* Black background for tools */
+            color: #fff; /* White text */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon glow effect */
+            display: flex;
+            align-items: center; /* Vertically center the content */
+        }
+
+        .tool-info {
+            flex: 1; /* Take remaining space */
+            text-align: left; /* Align text to the left */
+        }
+
+        h1, h2, h3 {
+            color: #00ff00; /* Neon green for headers */
+        }
+
+        a {
+            color: #00cc00; /* Darker green for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .tool-logo {
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        .tool-instructions ol {
+            padding-left: 20px;
+        }
+
+        .tool-instructions ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tools in Computer Vision</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="cv-details">
+        <ul id="cv-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const cvTools = [
+            {
+                name: "OpenCV",
+                description: "OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a wide range of tools for image and video analysis, including object detection, facial recognition, and more.",
+                link: "https://opencv.org/",
+                logo: "catalog/opencv.png",
+                instructions: [
+                    "Install OpenCV using your preferred method.",
+                    "Import OpenCV in your Python script.",
+                    "Use OpenCV functions for various computer vision tasks."
+                ]
+            },
+            {
+                name: "TensorFlow",
+                description: "TensorFlow is an open-source machine learning framework developed by the Google Brain team. It is widely used for various machine learning tasks, including computer vision.",
+                link: "https://www.tensorflow.org/",
+                logo: "catalog/tensorflow.png",
+                instructions: [
+                    "Install TensorFlow using pip: `pip install tensorflow`.",
+                    "Import TensorFlow in your Python script.",
+                    "Utilize TensorFlow for building and training computer vision models."
+                ]
+            },
+            {
+                name: "YOLO (You Only Look Once)",
+                description: "YOLO is a real-time object detection system known for its speed and accuracy in detecting and classifying objects in images and videos.",
+                link: "https://pjreddie.com/darknet/yolo/",
+                logo: "catalog/yolo.png",
+                instructions: [
+                    "Download YOLO and follow the installation instructions.",
+                    "Use YOLO for real-time object detection in images and videos."
+                ]
+            }
+        ];
+
+        const cvToolList = document.getElementById("cv-tool-list");
+
+        cvTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                <div class="tool-info">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <a href="${tool.link}" target="_blank">Visit Site</a>
+                    <div class="tool-instructions">
+                        <h4>How to Use ${tool.name}:</h4>
+                        <ol>
+                            ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        </ol>
+                    </div>
+                </div>
+            `;
+            cvToolList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

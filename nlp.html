@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing (NLP)</title>
+    <style>
+                body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+
+        header {
+            background-color: #1a1a1a; /* Darker header background */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #nlp-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #434343; /* Dark background for list items */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #00bfff; /* Border color */
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Glow effect */
+        }
+
+        h1, h2, h3, h4 {
+            color: #fff; /* White text */
+        }
+
+        a {
+            color: #1e90ff; /* Bright blue for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: justify;
+            margin-top: 15px;
+            box-shadow: none; /* Remove glow effect */
+        }
+
+        .tool-logo {
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tools in Natural Language Processing (NLP)</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="nlp-details">
+        <ul id="nlp-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const nlpTools = [
+            {
+                name: "Spacy",
+                description: "Spacy is an open-source natural language processing library designed to be fast and efficient. It provides pre-trained models for various languages and tasks such as part-of-speech tagging, named entity recognition, and more.",
+                link: "https://spacy.io/",
+                logo: "catalog/spacy.png",
+                instructions: [
+                    "Install Spacy using pip: `pip install spacy`.",
+                    "Download a pre-trained model: `python -m spacy download en_core_web_sm`.",
+                    "Use Spacy in your Python script by importing and processing text."
+                ]
+            },
+            {
+                name: "NLTK",
+                description: "Natural Language Toolkit (NLTK) is a powerful library for working with human language data. It includes easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and more.",
+                link: "https://www.nltk.org/",
+                logo: "catalog/nltk.png",
+                instructions: [
+                    "Install NLTK using pip: `pip install nltk`.",
+                    "Import NLTK in your Python script and download necessary resources: `nltk.download('punkt')`.",
+                    "Use NLTK for various natural language processing tasks."
+                ]
+            },
+            {
+                name: "TextBlob",
+                description: "TextBlob is a Python library for processing textual data. It provides a simple API for common natural language processing (NLP) tasks, such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.",
+                link: "https://textblob.readthedocs.io/",
+                logo: "catalog/textblob.png",
+                instructions: [
+                    "Install TextBlob using pip: `pip install textblob`.",
+                    "Import TextBlob in your Python script and create a TextBlob object with your text: `blob = TextBlob('Your text here')`.",
+                    "Utilize TextBlob's methods for various NLP tasks."
+                ]
+            },
+            {
+                name: "Stanford Core NLP",
+                description: "Stanford Core NLP is a suite of natural language processing tools developed by the Stanford NLP Group. It provides tools for various tasks, including part-of-speech tagging, named entity recognition, sentiment analysis, coreference resolution, and more.",
+                link: "https://stanfordnlp.github.io/CoreNLP/",
+                logo: "catalog/stanford_core_nlp.png",
+                instructions: [
+                    "Download the Stanford Core NLP library from the official website.",
+                    "Start the Core NLP server: `java -cp 'stanford-corenlp/*' edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000`.",
+                    "Use the Core NLP server to process text through API requests."
+                ]
+            },
+            // Add more NLP tools as needed
+        ];
+
+        const nlpToolList = document.getElementById("nlp-tool-list");
+
+        // Populate the NLP tool list
+        nlpTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                <p>${tool.description}</p>
+                <a href="${tool.link}" target="_blank">Visit Site</a>
+                <div class="tool-instructions">
+                    <h4>How to Use ${tool.name}:</h4>
+                    <ol>
+                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+            `;
+            nlpToolList.appendChild(li);
+        });
+    </script>
+</body>
+</html>

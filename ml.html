@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+
+        header {
+            background-color: #4b0082; /* Dark purple header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ff00ff; /* Bright magenta links */
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #ml-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #42424c; /* Darker purple background for tools */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #ff00ff; /* Bright magenta border */
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Magenta glow */
+        }
+
+        h1, h2, h3 {
+            color: #ff00ff; /* Bright magenta for headers */
+        }
+
+        a {
+            color: #ffd700; /* Gold for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .tool-logo {
+            max-width: 150px;
+            max-height: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Machine Learning Tools</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="ml-details">
+        <ul id="ml-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const mlTools = [
+            {
+                name: "Scikit-learn",
+                description: "Scikit-learn is an open-source machine learning library for Python. It provides simple and efficient tools for data analysis and modeling, including classification, regression, clustering, and more.",
+                link: "https://scikit-learn.org/",
+                logo: "catalog/Scikit-learn.png",
+                instructions: [
+                    "Install Scikit-learn using pip: `pip install scikit-learn`.",
+                    "Import Scikit-learn in your Python script.",
+                    "Use Scikit-learn for various machine learning tasks."
+                ]
+            },
+            {
+                name: "PyTorch",
+                description: "PyTorch is an open-source machine learning library for Python. It is known for its dynamic computation graph and provides tools for building and training deep neural networks.",
+                link: "https://pytorch.org/",
+                logo: "catalog/Pytorch.png",
+                instructions: [
+                    "Install PyTorch using pip: `pip install torch`.",
+                    "Import PyTorch in your Python script.",
+                    "Use PyTorch for building and training deep neural networks."
+                ]
+            },
+            {
+                name: "Orange",
+                description: "Orange is an open-source data visualization and analysis tool for novice and expert users. It provides a visual programming interface for data analysis and machine learning tasks.",
+                link: "https://orange.biolab.si/",
+                logo: "catalog/orange-logo.png",
+                instructions: [
+                    "Install Orange using pip: `pip install Orange3`.",
+                    "Launch Orange and use its visual programming interface for data analysis and machine learning."
+                ]
+            }
+        ];
+
+        const mlToolList = document.getElementById("ml-tool-list");
+
+        mlTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <h3>
+                    <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                </h3>
+                <p>${tool.description}</p>
+                <a href="${tool.link}" target="_blank">Visit Site</a>
+                <div class="tool-instructions">
+                    <h4>How to Use:</h4>
+                    <ol>
+                        ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+            `;
+            mlToolList.appendChild(li);
+        });
+    </script>    
+</body>
+
+</html>

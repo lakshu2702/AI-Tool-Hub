@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+
+        header {
+            background-color: #444; /* Darker header */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #0000ff; /* Blue links */
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #sr-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #444; /* Darker background for tools */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #0000ff; /* Blue border */
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glow */
+            display: flex; /* Flexbox for layout */
+            align-items: center; /* Center items vertically */
+        }
+
+        h1, h2, h3 {
+            color: #bebebe; /* Blue for headers */
+        }
+
+        a {
+            color: #ffcc00; /* Gold for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: justify;
+            margin-top: 10px;
+            flex: 1; /* Allow instructions to take available space */
+        }
+
+        .tool-logo {
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px; /* Space between image and text */
+        }
+
+        .tool-instructions ol {
+            padding-left: 20px;
+        }
+
+        .tool-instructions ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tools in Speech Recognition</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="sr-details">
+        <ul id="sr-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const srTools = [
+            {
+                name: "Pocket Sphinx",
+                description: "Pocket Sphinx is a lightweight speech recognition engine that is part of the CMU Sphinx project. It is designed for embedded systems and mobile applications, providing offline speech recognition capabilities.",
+                link: "https://cmusphinx.github.io/",
+                logo: "catalog/Pocket-Sphinx.png",
+                instructions: [
+                    "Download and install Pocket Sphinx from the official website.",
+                    "Integrate Pocket Sphinx into your application for offline speech recognition."
+                ]
+            },
+            {
+                name: "Wit AI",
+                description: "Wit AI is a natural language processing interface that enables developers to incorporate speech recognition and intent understanding into their applications. It allows for building applications with voice-based user interfaces.",
+                link: "https://wit.ai/",
+                logo: "catalog/wit-ai.png",
+                instructions: [
+                    "Sign up for a Wit AI account and create a new application.",
+                    "Train your application to recognize specific intents and entities for speech recognition.",
+                    "Integrate Wit AI into your application using the provided API."
+                ]
+            }
+        ];
+
+        const srToolList = document.getElementById("sr-tool-list");
+
+        srTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                <div>
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <a href="${tool.link}" target="_blank">Visit Site</a>
+                    <div class="tool-instructions">
+                        <h4>How to Use:</h4>
+                        <ol>
+                            ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        </ol>
+                    </div>
+                </div>
+            `;
+            srToolList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

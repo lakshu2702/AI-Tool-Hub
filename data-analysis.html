@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+
+        header {
+            background-color: #d0839c; /* Darker header */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #7c003e; /* Pink links */
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px 50px;
+            text-align: center;
+        }
+
+        #data-analysis-tool-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #494949; /* Darker background for tools */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #ff69b4; /* Pink border */
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow */
+            display: flex; /* Flexbox for layout */
+            align-items: center; /* Center items vertically */
+        }
+
+        h1{
+            color: #530029;
+        }
+        h2, h3 {
+            color: #ff69b4; /* Pink for headers */
+        }
+
+        a {
+            color: #ffcc00; /* Gold for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tool-instructions {
+            text-align: justify;
+            margin-top: 10px;
+            flex: 1; /* Allow instructions to take available space */
+        }
+
+        .tool-logo {
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px; /* Space between image and text */
+        }
+
+        .tool-instructions ol {
+            padding-left: 20px;
+        }
+
+        .tool-instructions ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tools for Data Analysis</h1>
+        <nav>
+            <a href="ai_catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
+
+    <section id="data-analysis-details">
+        <ul id="data-analysis-tool-list">
+        </ul>
+    </section>
+
+    <script>
+        const dataAnalysisTools = [
+            {
+                name: "Pandas",
+                description: "Pandas is an open-source data analysis and manipulation library for Python. It provides data structures like DataFrame for efficient data analysis and cleaning. Pandas is widely used in data science and machine learning.",
+                link: "https://pandas.pydata.org/",
+                logo: "catalog/pandas.png",
+                instructions: [
+                    "Install Pandas using pip: `pip install pandas`. ",
+                    "Import Pandas in your Python script or Jupyter notebook.",
+                    "Create a DataFrame and perform various data analysis tasks using Pandas functions."
+                ]
+            },
+            {
+                name: "NumPy",
+                description: "NumPy is a powerful numerical computing library for Python. It provides support for large, multi-dimensional arrays and matrices, along with mathematical functions to operate on these arrays. NumPy is a fundamental package for scientific computing with Python.",
+                link: "https://numpy.org/",
+                logo: "catalog/numpy.png",
+                instructions: [
+                    "Install NumPy using pip: `pip install numpy`.",
+                    "Import NumPy in your Python script or Jupyter notebook.",
+                    "Create and manipulate arrays, and perform mathematical operations using NumPy functions."
+                ]
+            }
+        ];
+
+        const dataAnalysisToolList = document.getElementById("data-analysis-tool-list");
+
+        dataAnalysisTools.forEach(tool => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <img class="tool-logo" src="${tool.logo}" alt="${tool.name} Logo">
+                <div>
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <a href="${tool.link}" target="_blank">Visit Site</a>
+                    <div class="tool-instructions">
+                        <h4>How to Use:</h4>
+                        <ol>
+                            ${tool.instructions.map(step => `<li>${step}</li>`).join('')}
+                        </ol>
+                    </div>
+                </div>
+            `;
+            dataAnalysisToolList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>
