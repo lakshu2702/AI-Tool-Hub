@@ -49,6 +49,15 @@ A **Chatbot** is integrated into the platform to assist users with queries regar
 - **Database:** Database Management System (DBMS)
 - **AI Tools:** Predictive analytics, machine learning algorithms
 
+  
+##Getting Started
+To set up and run the project locally:
+1. Clone the repository.
+2. Set up a local server (e.g., XAMPP, WAMP).
+3. Ensure PHP and MySQL are installed.
+4. Run the project on the server.
+5. Access the platform via `localhost`.
+
 To set up the backend database, you can use the following SQL scripts to create the necessary tables for user management, tools, blog posts, and chatbot interactions:
 
 ```sql
@@ -78,16 +87,6 @@ CREATE TABLE feedback (
     message TEXT NOT NULL,
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
----
-
-## Getting Started
-To set up and run the project locally:
-1. Clone the repository.
-2. Set up a local server (e.g., XAMPP, WAMP).
-3. Ensure PHP and MySQL are installed.
-4. Run the project on the server.
-5. Access the platform via `localhost`.
 
 ---
 
