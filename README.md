@@ -22,7 +22,7 @@ The homepage of AI Toolbox Hub provides a clean and welcoming interface, introdu
 This section presents a catalog of various AI tools available on the platform. Each tool is categorized for easy navigation, and users can learn more about each tool’s functionality and usage with just a click. The layout is designed to ensure that users can quickly find the right tool for their needs.
 
 ### 3. Blog Section
-![Blog Section](blogpg.png)
+![Blog Section](Blogpg.png)
 The blog section offers informative articles and tutorials on AI-related topics. Users can explore posts that cover the latest trends, guides, and innovations in artificial intelligence. The design is clean and reader-friendly, making it easy to follow along with the content.
 
 ### 4. Chatbot Interface
