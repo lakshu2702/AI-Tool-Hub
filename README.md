@@ -79,6 +79,7 @@ CREATE TABLE feedback (
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+---
 
 ## Getting Started
 To set up and run the project locally:
