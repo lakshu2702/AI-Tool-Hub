@@ -13,29 +13,29 @@ The **AI Toolbox Hub** is a dynamic website that consolidates a wide range of ar
 ## Screenshots
 Below are screenshots showcasing the key pages and features of the AI Toolbox Hub platform:
 
-### 1. Homepage
-![Homepage](web.png)
-The homepage of AI Toolbox Hub provides a clean and welcoming interface, introducing users to the platform’s core features. The navigation is intuitive, guiding users to explore the available AI tools, blogs, and chatbot assistance.
+### 1. Login Page
+![Login Page](screenshots/Login.png)
+The login page provides a secure and seamless way for users to sign into the platform. The simple design ensures that the login process is fast, and the platform uses encrypted passwords to keep user data safe.
 
-### 2. Tools Section (Catalog)
-![Tools Section](catalouge.png)
-This section presents a catalog of various AI tools available on the platform. Each tool is categorized for easy navigation, and users can learn more about each tool’s functionality and usage with just a click. The layout is designed to ensure that users can quickly find the right tool for their needs.
-
-### 3. Blog Section
-![Blog Section](Blogpg.png)
-The blog section offers informative articles and tutorials on AI-related topics. Users can explore posts that cover the latest trends, guides, and innovations in artificial intelligence. The design is clean and reader-friendly, making it easy to follow along with the content.
-
-### 4. Chatbot Interface
-![Chatbot Interface](chatbotpg.png)
-The chatbot feature provides real-time assistance to users. Whether you’re looking for help navigating the platform or seeking guidance on using specific tools, the chatbot is always available to provide relevant answers. This screenshot shows the chatbot's interface, which is simple yet highly responsive, improving user interaction.
-
-### 5. Dashboard
-![Dashboard](dashboard.png)
+### 2. Dashboard
+![Dashboard](screenshots/dashboard.png)
 The user dashboard allows individuals to manage their account settings, view their interaction history with AI tools, and track their progress. This centralized space ensures that users have quick access to all the features they use most frequently.
 
-### 6. Login Page
-![Login Page](Login.png)
-The login page provides a secure and seamless way for users to sign into the platform. The simple design ensures that the login process is fast, and the platform uses encrypted passwords to keep user data safe.
+### 3. Blog Section
+![Blog Section](screenshots/Blogpg.png)
+The blog section offers informative articles and tutorials on AI-related topics. Users can explore posts that cover the latest trends, guides, and innovations in artificial intelligence. The design is clean and reader-friendly, making it easy to follow along with the content.
+
+### 4. Tools Section (Catalog)
+![Tools Section](screenshots/catalouge.png)
+This section presents a catalog of various AI tools available on the platform. Each tool is categorized for easy navigation, and users can learn more about each tool’s functionality and usage with just a click. The layout is designed to ensure that users can quickly find the right tool for their needs.
+
+### 5. Homepage
+![Homepage](screenshots/web.png)
+The homepage of AI Toolbox Hub provides a clean and welcoming interface, introducing users to the platform’s core features. The navigation is intuitive, guiding users to explore the available AI tools, blogs, and chatbot assistance.
+
+### 6. Chatbot Interface
+![Chatbot Interface](screenshots/chatbotpg.png)
+The chatbot feature provides real-time assistance to users. Whether you’re looking for help navigating the platform or seeking guidance on using specific tools, the chatbot is always available to provide relevant answers. This screenshot shows the chatbot's interface, which is simple yet highly responsive, improving user interaction.
 
 ## Blog Section
 The platform includes a **Blog Section**, where users can explore informative articles and tutorials on AI-related topics. This section helps users stay updated with the latest trends, guides, and innovations in artificial intelligence. The blog is a great resource for anyone looking to deepen their understanding of AI technologies.
