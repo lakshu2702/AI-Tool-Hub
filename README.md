@@ -87,7 +87,3 @@ CREATE TABLE feedback (
     message TEXT NOT NULL,
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
----
-
-Elevate your decision-making capabilities by unlocking the potential of AI tools through the AI Toolbox Hub—your gateway to a smarter, data-driven future.
