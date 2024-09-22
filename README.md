@@ -58,7 +58,7 @@ To set up and run the project locally:
 4. Run the project on the server.
 5. Access the platform via `localhost`.
 
-To set up the backend database, you can use the following SQL scripts to create the necessary tables for user management, tools, blog posts, and chatbot interactions:
+To set up the backend database, you can use the following SQL scripts to create the necessary tables for user management:
 
 ```sql
 -- Table for storing user information
