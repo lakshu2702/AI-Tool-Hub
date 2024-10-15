@@ -57,7 +57,7 @@ To set up and run the project locally:
 
 1. Clone the repository.
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/lakshu2702/AI-Tool-Hub>
    ```
 2. Set up a local server (e.g., XAMPP, WAMP).
 3. Ensure PHP and MySQL are installed.
